@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susu Kedelai Segar - Sehat & Alami Setiap Hari</title>
+    <style>
+        :root {
+            --primary: #4ade80;       /* Hijau segar alami */
+            --primary-dark: #16a34a;
+            --bg-light: #f0fdf4;       /* Latar hijau sangat muda */
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%);
+            padding: 60px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(74, 222, 128, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 24px auto;
+        }
+
+        /* Gaya Khusus Foto Produk */
+        .product-image-container {
+            margin: 20px auto 30px auto;
+            max-width: 350px;
+            width: 100%;
+            padding: 0 10px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+            border: 4px solid #ffffff;
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Info Harga & Kemasan */
+        .price-tag {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 24px;
+            padding: 20px 32px;
+            display: inline-block;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            margin-bottom: 35px;
+            transition: all 0.3s ease;
+        }
+
+        .price-tag:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .price-tag .amount {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+
+        .price-tag .detail {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* Tombol Pesan WhatsApp */
+        .btn-order {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 18px;
+            font-size: 16px;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(22, 163, 74, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-order:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 25px rgba(22, 163, 74, 0.3);
+        }
+
+        .btn-order:active {
+            transform: scale(0.98);
+        }
+
+        /* Keunggulan Section */
+        .features {
+            padding: 60px 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #f3f4f6;
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            border-color: #e5e7eb;
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            background-color: #f9fafb;
+            font-size: 14px;
+            color: var(--text-muted);
+            border-top: 1px solid #f3f4f6;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 16px; }
+            .product-image-container { max-width: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bagian Utama / Hero -->
+    <section class="hero">
+        <span class="badge">100% Murni &amp; Higienis</span>
+        <h1>Susu Kedelai Segar Rumahan</h1>
+        <p>Diproduksi setiap hari dari biji kedelai pilihan berkualitas tinggi. Diproses secara bersih untuk menjaga keaslian rasa dan kandungan nutrisinya.</p>
+        
+        <!-- Wadah Tempat Foto Produk Disisipkan -->
+        <div class="product-image-container">
+            <img src="produk.jpg" alt="Susu Kedelai Segar Kemasan Praktis" class="product-image">
+        </div>
+
+        <!-- Info Harga & Ukuran -->
+        <div>
+            <div class="price-tag">
+                <div class="amount">Rp 1.000</div>
+                <div class="detail">Kemasan Praktis (Plastik 8x15)</div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Tombol Pesanan Otomatis ke WhatsApp -->
+        <!-- ⚠️ Ubah nomor 6281234567890 di bawah dengan nomor WhatsApp dagang Anda -->
+        <a href="https://wa.me!" class="btn-order" target="_blank">
+            <span>Pesan via WhatsApp</span>
+        </a>
+    </section>
+
+    <!-- Bagian Fitur Keunggulan -->
+    <section class="features">
+        <h2 class="section-title">Mengapa Memilih Susu Kedelai Kami?</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="card-icon">🌱</span>
+                <h3>Bahan Alami</h3>
+                <p>Hanya menggunakan kedelai pilihan terbaik tanpa tambahan bahan pengawet kimia berbahaya.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">💪</span>
+                <h3>Kaya Nutrisi</h3>
+                <p>Sumber protein nabati yang sangat baik untuk menjaga stamina dan kesehatan tubuh seluruh keluarga.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🥛</span>
+                <h3>Dibuat Segar</h3>
+                <p>Diperas dan disaring secara intensif setiap hari untuk memastikan tekstur rasa gurih yang pas dan lembut.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer bawah -->
+    <footer>
+        <p>&copy; 2026 Susu Kedelai Segar. Dibuat dengan penuh dedikasi kesehatan.</p>
+    </footer>
+
+</body>
+  </html>
+  
