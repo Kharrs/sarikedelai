@@ -1,31 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // Mengambil semua elemen yang memiliki class 'fade-in-scroll'
+    // Menjaring seluruh bagian halaman yang bertanda 'fade-in-scroll'
     const elemenScroll = document.querySelectorAll('.fade-in-scroll');
 
-    // Pengaturan pendeteksi layar
-    const opsiPendeteksi = {
-        root: null,         // Menggunakan layar utama browser sebagai acuan
-        threshold: 0.15,    // Animasi aktif jika 15% bagian elemen sudah masuk ke layar
-        rootMargin: "0px"   
-    };
+    function jalankanDeteksiScroll() {
+        elemenScroll.forEach(elemen => {
+            // Mengambil posisi komponen relatif terhadap tinggi layar
+            const posisiElemenAtas = elemen.getBoundingClientRect().top;
+            
+            // Batas pemicu aktif (Elemen terdeteksi jika sudah naik mencapai 85% area layar)
+            const batasPemicuLayar = window.innerHeight * 0.85;
 
-    // Fungsi pemicu saat elemen masuk ke dalam pandangan layar
-    const pengawasLayar = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            // Jika elemen sudah tergeser masuk dan terlihat di layar
-            if (entry.isIntersecting) {
-                // Tambahkan class 'muncul' untuk memicu animasi CSS pudar masuk
-                entry.target.classList.add('muncul');
-                // Hentikan pengawasan pada elemen ini agar animasi tidak berulang-ulang
-                observer.unobserve(entry.target);
+            if (posisiElemenAtas < batasPemicuLayar) {
+                // Memberikan lampu hijau efek CSS pudar masuk
+                elemen.classList.add('muncul');
             }
         });
-    }, opsiPendeteksi);
+    }
 
-    // Daftarkan semua elemen target ke dalam sistem pengawasan layar
-    elemenScroll.forEach(elemen => {
-        pengawasLayar.observe(elemen);
-    });
-
+    // Mengaktifkan pendeteksi gulir secara terus menerus saat layar digeser
+    window.addEventListener('scroll', jalankanDeteksiScroll);
+    
+    // Jalankan satu kali di awal untuk memeriksa bagian atas halaman
+    jalankanDeteksiScroll();
 });
