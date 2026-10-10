@@ -103,7 +103,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* Tampilan Kolom Grid Desktop */
+/* Susunan Grid 3 Kolom Menyamping di Tampilan Komputer/Desktop */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -154,27 +154,33 @@ body {
     border-left: 4px solid var(--primary);
 }
 
-/* ⚡ PENGATURAN WA MELAYANG TETAP IKUT SCROLL */
+.step-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* ⚡ SISTEM WA MELAYANG UTUH & SELALU IKUT SAAT DI-SCROLL */
 .btn-wa-floating {
-    position: fixed;            
-    bottom: 24px;               
-    left: 24px;                 
-    background-color: #25d366;  
-    color: #ffffff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.5);
-    z-index: 9999;              
-    transition: transform 0.2s ease;
-    text-decoration: none;
+    position: fixed !important;            
+    bottom: 24px !important;               
+    left: 24px !important;                 
+    background-color: #25d366 !important;  
+    color: #ffffff !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.5) !important;
+    z-index: 99999 !important; /* Memastikan ikon di atas komponen lain */
+    transition: transform 0.2s ease !important;
+    text-decoration: none !important;
 }
 
 .btn-wa-floating:hover {
-    transform: scale(1.1);      
+    transform: scale(1.1) !important;      
 }
 
 .btn-wa-floating svg {
@@ -192,37 +198,34 @@ footer {
     border-top: 1px solid #f3f4f6;
 }
 
-/* =================================================================
-   ⚙️ STYLE UNTUK ANIMASI PUDAR SAAT SCROLL (Intersection Observer)
-   ================================================================= */
+/* ⚙️ KLASIFIKASI KODE UNTUK EFEK PUDAR SAAT SCROLL */
 .fade-in-scroll {
     opacity: 0;
-    transform: translateY(40px); /* Posisi awal agak turun di bawah layar */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Kecepatan transisi pudar */
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Class ini akan dipasang oleh JavaScript secara otomatis saat layar digeser */
 .fade-in-scroll.muncul {
     opacity: 1;
-    transform: translateY(0); /* Naik kembali ke posisi asli secara halus */
+    transform: translateY(0);
 }
 
-/* 📱 PENYESUAIAN OTOMATIS TAMPILAN ANDROID (LAYAR KECIL) */
+/* 📱 PENGATURAN RESPONSIF OTOMATIS LAYAR HP ANDROID (DIBAWAH 768PX) */
 @media (max-width: 768px) {
     .hero h1 { font-size: 28px; }
     .hero p { font-size: 16px; }
     .product-image-container { max-width: 300px; }
     
-    /* Grid desktop 3 kolom dijajarkan vertikal 1 kolom di HP Android */
+    /* Mengubah susunan samping desktop menjadi susunan lurus bawah vertikal di HP */
     .grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
     .btn-wa-floating { 
-        bottom: 20px; 
-        left: 20px; 
-        width: 55px; 
-        height: 55px; 
+        bottom: 20px !important; 
+        left: 20px !important; 
+        width: 55px !important; 
+        height: 55px !important; 
     }
     .btn-wa-floating svg { width: 28px; height: 28px; }
 }
