@@ -2,7 +2,6 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <!-- Mengatur agar tampilan otomatis pas dan proporsional di layar HP Android -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Susu Kedelai Segar - Sehat &amp; Alami Setiap Hari</title>
     
@@ -11,18 +10,16 @@
 </head>
 <body>
 
-    <!-- Bagian Utama / Atas (Hero) -->
+    <!-- Bagian Utama / Atas (Hero langsung muncul tanpa efek scroll) -->
     <section class="hero">
         <span class="badge">100% Murni &amp; Higienis</span>
         <h1>Susu Kedelai Segar Rumahan</h1>
         <p>Diproduksi setiap hari dari biji kedelai pilihan berkualitas tinggi. Diproses secara bersih untuk menjaga keaslian rasa dan kandungan nutrisinya.</p>
         
-        <!-- Foto Produk -->
         <div class="product-image-container">
             <img src="produk.jpg" alt="Susu Kedelai Segar Kemasan Praktis" class="product-image">
         </div>
 
-        <!-- Info Harga Utama -->
         <div>
             <div class="price-tag">
                 <div class="amount">Rp 1.000</div>
@@ -31,8 +28,8 @@
         </div>
     </section>
 
-    <!-- Bagian Keunggulan -->
-    <section class="section-padding">
+    <!-- Bagian Keunggulan (Baru muncul pudar saat di-scroll ke bawah) -->
+    <section class="section-padding fade-in-scroll">
         <h2 class="section-title">Mengapa Memilih Susu Kedelai Kami?</h2>
         <div class="grid">
             <div class="card">
@@ -53,8 +50,8 @@
         </div>
     </section>
 
-    <!-- Bagian Info Alur Pemesanan -->
-    <section class="section-padding">
+    <!-- Bagian Info Alur Pemesanan (Baru muncul pudar saat di-scroll lebih bawah lagi) -->
+    <section class="section-padding fade-in-scroll">
         <h2 class="section-title">Cara Pemesanan Produk</h2>
         <div class="order-steps">
             <div class="step-item">
@@ -85,5 +82,7 @@
         <p>&copy; 2026 Susu Kedelai Segar. Dibuat dengan penuh dedikasi kesehatan.</p>
     </footer>
 
+    <!-- 🔗 Menghubungkan ke file JavaScript terpisah di paling bawah halaman -->
+    <script src="script.js"></script>
 </body>
 </html>
