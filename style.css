@@ -1,0 +1,264 @@
+:root {
+    --primary: #4ade80;       /* Hijau segar alami */
+    --primary-dark: #16a34a;
+    --bg-light: #f0fdf4;       /* Latar hijau sangat muda */
+    --text-dark: #1f2937;
+    --text-muted: #4b5563;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 🌟 ANIMASI PREMIUM: TRANSISI PUDAR MASUK SAAT WEB DIBUKA */
+body {
+    background-color: #ffffff;
+    color: var(--text-dark);
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInPage 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%);
+    padding: 60px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge {
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(74, 222, 128, 0.3);
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+}
+
+/* Wadah Foto Produk */
+.product-image-container {
+    margin: 20px auto 30px auto;
+    max-width: 350px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+    border: 4px solid #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.03);
+}
+
+/* Info Harga Utama */
+.price-tag {
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 20px 32px;
+    display: inline-block;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.price-tag:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.price-tag .amount {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+.price-tag .detail {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* Pengaturan Layout Seksi Konten */
+.section-padding {
+    padding: 60px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* 💻 TAMPILAN DEFAULT (DESKTOP / LAPTOP): Menggunakan Grid 3 Kolom Samping */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #f3f4f6;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 🌟 EFÈK TAMBAHAN: Hover kartu bersinar dan sedikit terangkat */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -5px rgba(74, 222, 128, 0.15);
+    border-color: var(--primary);
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Alur Pemesanan */
+.order-steps {
+    background-color: #fafafa;
+    border-radius: 24px;
+    padding: 32px;
+    border: 1px solid #eeeeee;
+}
+
+.step-item {
+    margin-bottom: 24px;
+    padding-left: 16px;
+    border-left: 4px solid var(--primary);
+}
+
+.step-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* ⚡ TOMBOL LOGO WA MELAYANG: Tetap ikut di layar pojok kiri bawah */
+.btn-wa-floating {
+    position: fixed;            
+    bottom: 24px;               
+    left: 24px;                 
+    background-color: #25d366;  
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.5);
+    z-index: 9999;              /* Berada di lapisan paling atas */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-wa-floating:hover {
+    transform: scale(1.1);      
+    background-color: #20ba5a;
+}
+
+.btn-wa-floating svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 24px;
+    background-color: #f9fafb;
+    font-size: 14px;
+    color: var(--text-muted);
+    border-top: 1px solid #f3f4f6;
+}
+
+/* 📱 ATURAN KHUSUS UNTUK TAMPILAN SMARTPHONE (ANDROID / IPHONE) */
+@media (max-width: 768px) {
+    .hero h1 { 
+        font-size: 28px; 
+    }
+    .hero p { 
+        font-size: 16px; 
+    }
+    .product-image-container { 
+        max-width: 300px; 
+    }
+    /* Mengubah grid desktop 3 kolom menjadi 1 kolom vertikal saja agar pas di layar HP */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    /* Menyesuaikan ukuran tombol WA agar tidak terlalu besar di layar kecil HP */
+    .btn-wa-floating { 
+        bottom: 20px; 
+        left: 20px; 
+        width: 55px; 
+        height: 55px; 
+    }
+    .btn-wa-floating svg { 
+        width: 28px; 
+        height: 28px; 
+    }
+}
