@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const posisiElemenAtas = elemen.getBoundingClientRect().top;
             
             // Batas pemicu aktif (Elemen terdeteksi jika sudah naik mencapai 85% area layar)
-            const batasPemicuLayar = window.innerHeight * 1;
+            const batasPemicuLayar = window.innerHeight * 0.80;
 
             if (posisiElemenAtas < batasPemicuLayar) {
                 // Memberikan lampu hijau efek CSS pudar masuk
