@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Susu Kedelai Segar - Sehat & Alami Setiap Hari</title>
+    <title>Susu Kedelai Segar - Sehat &amp; Alami Setiap Hari</title>
     <style>
         :root {
             --primary: #4ade80;       /* Hijau segar alami */
@@ -20,10 +20,24 @@
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
+        /* 🌟 EFEK TRANSISI PUDAR MASUK (FADE-IN EFFECT) */
         body {
             background-color: #ffffff;
             color: var(--text-dark);
             line-height: 1.6;
+            opacity: 0;
+            animation: fadeInPage 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeInPage {
+            from {
+                opacity: 0;
+                transform: translateY(10px); /* Sedikit terangkat saat muncul */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Hero Section */
@@ -62,7 +76,7 @@
             margin: 0 auto 24px auto;
         }
 
-        /* Gaya Khusus Foto Produk */
+        /* Wadah Foto Produk */
         .product-image-container {
             margin: 20px auto 30px auto;
             max-width: 350px;
@@ -76,14 +90,9 @@
             border-radius: 24px;
             box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
             border: 4px solid #ffffff;
-            transition: transform 0.3s ease;
         }
 
-        .product-image:hover {
-            transform: scale(1.02);
-        }
-
-        /* Info Harga & Kemasan */
+        /* Info Harga */
         .price-tag {
             background: #ffffff;
             border: 2px solid #e5e7eb;
@@ -91,13 +100,7 @@
             padding: 20px 32px;
             display: inline-block;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-            margin-bottom: 35px;
-            transition: all 0.3s ease;
-        }
-
-        .price-tag:hover {
-            transform: translateY(-3px);
-            border-color: var(--primary);
+            margin-bottom: 15px;
         }
 
         .price-tag .amount {
@@ -111,31 +114,6 @@
             color: var(--text-muted);
             margin-top: 4px;
             font-weight: 500;
-        }
-
-        /* Tombol Pesan WhatsApp */
-        .btn-order {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: #ffffff;
-            text-decoration: none;
-            padding: 18px 40px;
-            border-radius: 18px;
-            font-size: 16px;
-            font-weight: 700;
-            box-shadow: 0 10px 20px rgba(22, 163, 74, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .btn-order:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 25px rgba(22, 163, 74, 0.3);
-        }
-
-        .btn-order:active {
-            transform: scale(0.98);
         }
 
         /* Keunggulan Section */
@@ -164,12 +142,6 @@
             padding: 32px;
             border-radius: 20px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
-            border-color: #e5e7eb;
         }
 
         .card-icon {
@@ -189,6 +161,40 @@
             color: var(--text-muted);
         }
 
+        /* ⚡ IKON TOMBOL WHATSAPP MELAYANG DI POJOK KIRI BAWAH */
+        .btn-wa-floating {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            background-color: #25d366; /* Hijau resmi WhatsApp */
+            color: #ffffff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-wa-floating:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+        }
+
+        .btn-wa-floating:active {
+            transform: scale(0.95);
+        }
+
+        .btn-wa-floating svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -203,40 +209,34 @@
             .hero h1 { font-size: 28px; }
             .hero p { font-size: 16px; }
             .product-image-container { max-width: 300px; }
+            .btn-wa-floating { bottom: 16px; left: 16px; width: 50px; height: 50px; }
+            .btn-wa-floating svg { width: 26px; height: 26px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Bagian Utama / Hero -->
+    <!-- Bagian Utama -->
     <section class="hero">
         <span class="badge">100% Murni &amp; Higienis</span>
         <h1>Susu Kedelai Segar Rumahan</h1>
         <p>Diproduksi setiap hari dari biji kedelai pilihan berkualitas tinggi. Diproses secara bersih untuk menjaga keaslian rasa dan kandungan nutrisinya.</p>
         
-        <!-- Wadah Tempat Foto Produk Disisipkan -->
+        <!-- Foto Produk -->
         <div class="product-image-container">
             <img src="produk.jpg" alt="Susu Kedelai Segar Kemasan Praktis" class="product-image">
         </div>
 
-        <!-- Info Harga & Ukuran -->
+        <!-- Info Harga -->
         <div>
             <div class="price-tag">
                 <div class="amount">Rp 1.000</div>
                 <div class="detail">Kemasan Praktis (Plastik 8x15)</div>
             </div>
         </div>
-
-        <br>
-
-        <!-- Tombol Pesanan Otomatis ke WhatsApp -->
-        <!-- ⚠️ Ubah nomor 6281234567890 di bawah dengan nomor WhatsApp dagang Anda -->
-        <a href="https://wa.me!" class="btn-order" target="_blank">
-            <span>Pesan via WhatsApp</span>
-        </a>
     </section>
 
-    <!-- Bagian Fitur Keunggulan -->
+    <!-- Bagian Keunggulan -->
     <section class="features">
         <h2 class="section-title">Mengapa Memilih Susu Kedelai Kami?</h2>
         <div class="grid">
@@ -258,11 +258,19 @@
         </div>
     </section>
 
-    <!-- Footer bawah -->
+    <!-- ⚡ TOMBOL LOGO WHATSAPP MELAYANG -->
+    <!-- ⚠️ Ubah angka 6281234567890 di bawah dengan nomor WhatsApp dagang Anda -->
+    <a href="https://wa.me!" class="btn-wa-floating" target="_blank" title="Hubungi Kami di WhatsApp">
+        <!-- Ikon Resmi SVG WhatsApp Premium -->
+        <svg viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.973 0c3.184.001 6.177 1.242 8.426 3.496 2.248 2.253 3.487 5.244 3.484 8.425-.003 6.623-5.34 11.971-11.914 11.971-2.007-.002-3.982-.51-5.725-1.478L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403 0 9.794-4.386 9.797-9.789.002-2.618-1.013-5.079-2.86-6.93C16.305 2.036 13.852 1.02 11.24 1.02 5.842 1.02 1.45 5.405 1.448 10.81c0 1.517.432 2.997 1.25 4.3l-.944 3.453 3.537-.927-.244.118zm10.674-6.84c-.234-.117-1.38-.68-1.592-.757-.211-.077-.366-.117-.519.117-.154.234-.596.756-.73.911-.135.154-.269.175-.503.059-.234-.117-.986-.364-1.878-1.16-.694-.619-1.163-1.384-1.299-1.618-.136-.234-.015-.361.102-.477.106-.105.234-.274.349-.412.115-.138.154-.234.231-.39.077-.154.039-.292-.019-.412-.058-.117-.519-1.25-.71-1.707-.188-.451-.378-.39-.519-.397-.134-.007-.288-.009-.442-.009-.153 0-.403.058-.613.292-.211.234-.806.788-.806 1.922s.825 2.231.94 2.386c.115.154 1.626 2.483 3.939 3.481.55.238 1 .38 1.342.489.553.176 1.056.151 1.455.091.444-.066 1.38-.564 1.572-1.11.192-.546.192-1.014.135-1.11-.057-.097-.211-.154-.445-.271z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Susu Kedelai Segar. Dibuat dengan penuh dedikasi kesehatan.</p>
     </footer>
 
 </body>
-  </html>
-  
+</html>
