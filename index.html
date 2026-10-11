@@ -2,90 +2,26 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <!-- Meta tag wajib agar tampilan otomatis pas dan proporsional di HP Android maupun Desktop -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Susu Kedelai Segar - Sehat &amp; Alami Setiap Hari</title>
-    
-    <!-- 🔗 Menyambungkan ke file CSS terpisah -->
+    <title>Susu Kedelai Segar - Sehat & Alami Setiap Hari</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Bagian Hero (Langsung muncul saat web dibuka) -->
     <section class="hero">
-        <span class="badge">100% Murni &amp; Higienis</span>
-        <h1>Susu Kedelai Segar Rumahan</h1>
-        <p>Diproduksi setiap hari dari biji kedelai pilihan berkualitas tinggi. Diproses secara bersih untuk menjaga keaslian rasa dan kandungan nutrisinya.</p>
-        
-        <!-- Foto Produk -->
-        <div class="product-image-container">
-            <img src="produk.jpg" alt="Susu Kedelai Segar Kemasan Praktis" class="product-image">
-        </div>
-
-        <!-- Info Harga Utama -->
-        <div>
-            <div class="price-tag">
+        <h1 class="hero-title animate-pop">Susu Kedelai Segar Rumahan</h1>
+        <span class="badge animate-fade">100% Murni & Higienis</span>
+        <p class="hero-desc">Diproduksi setiap hari dari biji kedelai pilihan berkualitas tinggi.</p>
+        <div class="price-container">
+            <div class="price-tag shimmer">
                 <div class="amount">Rp 1.000</div>
-                <div class="detail">Kemasan Praktis (Plastik 8x15)</div>
+                <div class="detail">Kemasan Plastik</div>
+            </div>
+            <div class="price-tag shimmer highlight">
+                <div class="amount">Rp 4.000</div>
+                <div class="detail">Kemasan Botol 300 ml</div>
             </div>
         </div>
     </section>
-
-    <!-- Bagian Keunggulan (Dilengkapi class khusus untuk efek scroll pudar) -->
-    <section class="section-padding">
-        <h2 class="section-title">Mengapa Memilih Susu Kedelai Kami?</h2>
-        <div class="grid">
-            <div class="card">
-                <span class="card-icon">🌱</span>
-                <h3>Bahan Alami</h3>
-                <p>Hanya menggunakan kedelai pilihan terbaik tanpa tambahan bahan pengawet kimia berbahaya.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon">💪</span>
-                <h3>Kaya Nutrisi</h3>
-                <p>Sumber protein nabati yang sangat baik untuk menjaga stamina dan kesehatan tubuh seluruh keluarga.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon">🥛</span>
-                <h3>Dibuat Segar</h3>
-                <p>Diperas dan disaring secara intensif setiap hari untuk memastikan tekstur rasa gurih yang pas dan lembut.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bagian Alur Pemesanan (Dilengkapi class khusus untuk efek scroll pudar) -->
-    <section class="section-padding fade-in-scroll">
-        <h2 class="section-title fade-in-scroll">Cara Pemesanan Produk</h2>
-        <div class="order-steps fade-in-scroll">
-            <div class="step-item">
-                <h4>1. Klik Ikon WhatsApp</h4>
-                <p>Sentuh tombol ikon hijau WhatsApp yang melayang di pojok kiri bawah layar Anda untuk langsung terhubung dengan admin kami.</p>
-            </div>
-            <div class="step-item fade-in-scroll">
-                <h4>2. Tentukan Jumlah Pesanan</h4>
-                <p>Kirimkan pesan jumlah kemasan paket susu kedelai (Rp 1.000 / pack) yang ingin Anda beli beserta alamat pengiriman Anda.</p>
-            </div>
-            <div class="step-item fade-in-scroll">
-                <h4>3. Konfirmasi &amp; Pengiriman</h4>
-                <p>Kami akan memvalidasi pesanan Anda dan langsung memproses pengiriman susu kedelai segar langsung ke rumah Anda.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ⚡ TOMBOL LOGO WHATSAPP TERBANG PERMANEN ⚡ -->
-    <!-- ⚠️ Silakan ganti nomor 6281234567890 di bawah dengan nomor WhatsApp dagang Anda -->
-    <a href="https://wa.me!" class="btn-wa-floating" target="_blank" title="Hubungi Kami di WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.973 0c3.184.001 6.177 1.242 8.426 3.496 2.248 2.253 3.487 5.244 3.484 8.425-.003 6.623-5.34 11.971-11.914 11.971-2.007-.002-3.982-.51-5.725-1.478L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403 0 9.794-4.386 9.797-9.789.002-2.618-1.013-5.079-2.86-6.93C16.305 2.036 13.852 1.02 11.24 1.02 5.842 1.02 1.45 5.405 1.448 10.81c0 1.517.432 2.997 1.25 4.3l-.944 3.453 3.537-.927-.244.118zm10.674-6.84c-.234-.117-1.38-.68-1.592-.757-.211-.077-.366-.117-.519.117-.154.234-.596.756-.73.911-.135.154-.269.175-.503.059-.234-.117-.986-.364-1.878-1.16-.694-.619-1.163-1.384-1.299-1.618-.136-.234-.015-.361.102-.477.106-.105.234-.274.349-.412.115-.138.154-.234.231-.39.077-.154.039-.292-.019-.412-.058-.117-.519-1.25-.71-1.707-.188-.451-.378-.39-.519-.397-.134-.007-.288-.009-.442-.009-.153 0-.403.058-.613.292-.211.234-.806.788-.806 1.922s.825 2.231.94 2.386c.115.154 1.626 2.483 3.939 3.481.55.238 1 .38 1.342.489.553.176 1.056.151 1.455.091.444-.066 1.38-.564 1.572-1.11.192-.546.192-1.014.135-1.11-.057-.097-.211-.154-.445-.271z"/>
-        </svg>
-    </a>
-
-    <!-- Footer -->
-    <footer>
-        <p claas="fade-in-scroll">&copy; 2026 Susu Kedelai Segar. Dibuat dengan penuh dedikasi kesehatan.</p>
-    </footer>
-
-    <!-- 🔗 Menyambungkan ke logika Javascript terpisah -->
     <script src="script.js"></script>
 </body>
 </html>
