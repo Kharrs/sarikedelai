@@ -1,8 +1,0 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-body { background-color: #f9f6f0; color: #333; }
-.hero { text-align: center; padding: 60px 20px; background: #fef3c7; }
-.hero-title { font-size: 2.8rem; color: #1e3a1e; margin-bottom: 12px; }
-.price-container { display: flex; gap: 20px; justify-content: center; margin-top: 30px; }
-.price-tag { background: white; padding: 20px 30px; border-radius: 16px; }
-.price-tag.highlight { border: 2px solid #d97706; }
-.amount { font-size: 2rem; font-weight: 700; color: #d97706; }
