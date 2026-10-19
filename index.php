@@ -1,0 +1,35 @@
+<?php
+// index.php - Gerbang Utama Portal Informasi SOY MILK x Riswan
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARI KEDELAI BUNDA YUNA</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <canvas id="particleCanvas"></canvas>
+    <div class="aurora"></div>
+
+    <div class="portal-container">
+        <div class="portal-card" id="mainCard">
+            <h1 class="title">SARI KEDELAI</h1>
+            <h1 class="title1">Bunda Yuna</h1>
+            <p class="subtitle" id="typewriter"></p>
+
+            <!-- Menambahkan id="magneticArea" -->
+            <div class="btn-magnetic-container" id="magneticArea">
+                <!-- Mengubah id menjadi "portalBtn" agar cocok dengan JS -->
+                <a href="halaman.php" class="btn-portal" id="portalBtn">
+                    <span>Masuk ke Cerita</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

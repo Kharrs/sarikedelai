@@ -1,0 +1,255 @@
+<?php
+// halaman.php - Cerita Murni SARI KEDELAI Bunda Yuna
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerita Kami - SARI KEDELAI Bunda Yuna</title>
+    
+    <!-- Google Fonts untuk Teks Ramah & Tanda Tangan -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    
+    <!-- Menyambungkan ke CSS khusus halaman utama -->
+    <link rel="stylesheet" href="halaman.css">
+</head>
+<body>
+
+    <!-- ================= BAGIAN 1: HEADER ================= -->
+    <header class="site-header scroll-reveal">
+        <div class="logo-container">
+            <h1 class="brand-logo">SARI KEDELAI</h1>
+            <h1 class="brand-logo1">Bunda Yuna</h1>
+            <div class="floating-icon" aria-hidden="true">
+                <!-- Ikon Hati Line Art Kecil -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+            </div>
+        </div>
+        <p class="header-welcome">Selamat Datang di Cerita Kami!</p>
+        <p class="header-tagline">Terima kasih sudah memilih minuman kebaikan alami hari ini.</p>
+        <p class="header-tagline">Mari kita mulai pola hidup sehat dari sekarang.</p>
+    </header>
+
+    <main class="main-content">
+        
+        <!-- ================= BAGIAN 2: THE JOURNEY / STORY ================= -->
+        <section class="story-section scroll-reveal">
+            <div class="story-grid">
+                <div class="story-image-wrapper">
+                    <!-- Placeholder Foto Estetis Riswan / Proses Produksi -->
+                    <div class="story-img-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                        <span>Momen Pembuatan Alami</span>
+                    </div>
+                </div>
+                <div class="story-text-content">
+                    <p class="story-paragraph">
+                        Halo! Susu kedelai ini adalah hasil olahan rumahan untuk menciptakan susu kedelai yang tidak hanya lezat, tapi juga murni dan mempertahankan nutrisi terbaik dari alam. Kami memilih biji kedelai lokal pilihan, diproses dengan sepenuh hati tanpa bahan pengawet buatan, khusus untuk Anda yang menghargai kesehatan dan cita rasa otentik.
+                    </p>
+                    <div class="signature-block">
+                        <span class="signature-text">Yuna</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BAGIAN 3: TRANSPARENCY / NILAI JUAL ================= -->
+        <section class="features-section scroll-reveal">
+            <div class="features-grid">
+                
+                <!-- Kotak 1: Biji Kedelai Pilihan -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a10 10 0 0 1 7.5 16.5 8 8 0 0 1-15 0A10 10 0 0 1 12 2z"></path>
+                            <path d="M12 8v8"></path>
+                            <path d="M8 12h8"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">100% Kedelai Pilihan</h3>
+                    <p class="feature-desc">Kami hanya menggunakan kedelai pilihan dengan rasa yang gurih alami dan konsistensi yang pas.</p>
+                </div>
+
+                <!-- Kotak 2: Komposisi Alami -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a3 3 0 0 0 3-3v-4a3 3 0 0 0-3-3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Komposisi Alami</h3>
+                    <p class="feature-desc">Diolah murni dari kacang kedelai pilihan, gula pasir berkualitas, daun pandan segar, dan secubit garam.</p>
+                </div>
+
+                <!-- Kotak 3: Ramah Pencernaan -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Ramah Pencernaan</h3>
+                    <p class="feature-desc">Alternatif nabati murni yang aman dan sangat nyaman di perut, bebas laktosa untuk dinikmati setiap hari.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= BAGIAN 4: CARA MENIKMATI & PENYIMPANAN ================= -->
+        <section class="tips-section scroll-reveal">
+            <div class="tips-card">
+                <h3 class="tips-heading">Tips Menikmati SARI KEDELAI</h3>
+                <ol class="tips-list">
+                    <li>
+                        <strong>Kocok Dahulu:</strong> Endapan di bawah adalah bukti protein kedelai alami yang kaya, kocok perlahan sebelum diminum.
+                    </li>
+                    <li>
+                        <strong>Saran Penyajian:</strong> Nikmati selagi hangat di pagi hari untuk ketenangan ekstra, atau sajikan dingin langsung dari lemari es maupun di atas segelas es batu untuk kesegaran yang menyegarkan.
+                    </li>
+                    <li>
+                        <strong>Masa Simpan:</strong> Karena tanpa pengawet, segera habiskan setelah dibuka atau simpan di dalam kulkas maksimal 3 hari.
+                    </li>
+                </ol>
+            </div>
+        </section>
+   <!-- ================= BAGIAN 5: FAKTA MENARIK (POP-UP MODAL) ================= -->
+        <section class="facts-section scroll-reveal">
+            <div class="facts-card">
+                <h3 class="facts-heading">Fakta Menarik Seputar</h3>
+                <p class="facts-desc">Klik tombol di bawah untuk membuka informasi penting yang bermanfaat untuk Anda:</p>
+                
+                <div class="facts-btn-grid">
+                    <!-- Tombol 1: Manfaat Susu Kedelai -->
+                    <button type="button" class="btn-fact" data-modal="modal-manfaat">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <span>Manfaat Susu Kedelai</span>
+                    </button>
+
+                    <!-- Tombol 2: Proses Pembuatan Susu Kedelai (MENGGANTIKAN RISIKO MINUMAN KEMASAN) -->
+                    <button type="button" class="btn-fact" data-modal="modal-pembuatan">
+                        <!-- Ikon Mangkuk/Proses Pembuatan (Ganti Ikon Dolar) -->
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9z"></path>
+                            <path d="M7 8h10"></path>
+                            <path d="M12 3v3"></path>
+                        </svg>
+                        <span>Proses Pembuatan</span>
+                    </button>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- ================= BAGIAN 6: PEMESANAN & INFORMASI LAYANAN ================= -->
+        <section class="contact-section scroll-reveal">
+            <div class="contact-card">
+                <h3 class="contact-heading">Pemesanan & Informasi</h3>
+                <p class="contact-desc">
+                    Nikmati kesegaran susu kedelai murni buatan rumah untuk menemani hari Anda. 
+                </p>
+                
+                <!-- Kotak Detail Info (Jam, Area, PO) -->
+                <div class="info-badge-grid">
+                    <div class="info-badge">
+                        <strong>Jam Layanan Pengiriman:</strong> Subuh - 12.00 WIB
+                    </div>
+                    <div class="info-badge">
+                        <strong>Area Pengiriman:</strong> Khusus Wilayah Rejoso
+                    </div>
+                    <div class="info-badge">
+                        <strong>Sistem Pesan:</strong> Pre-Order (PO) H-1
+                    </div>
+                </div>
+
+                <a href="https://wa.me/6285231651685?text=Halo%20Kak,%20saya%20mau%20tanya%20seputar%20SARI%20KEDELAI%20Bunda%20Yuna." target="_blank" class="btn-wa-direct">
+                    <!-- Ikon WA SVG -->
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.012 2c-5.508 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.169 5.292-1.387c1.464.798 3.114 1.218 4.78 1.218h.004c5.508 0 9.99-4.478 9.99-9.985 0-2.667-1.038-5.175-2.926-7.063s-4.394-2.937-7.066-2.937zm5.882 14.28c-.247.695-1.439 1.327-1.986 1.411-.502.077-1.157.11-1.86-.114-.43-.137-.988-.319-1.703-.628-2.998-1.298-4.953-4.331-5.103-4.531-.15-.2-1.222-1.628-1.222-3.104 0-1.477.773-2.202 1.047-2.501.274-.3.599-.374.799-.374.199 0 .399.002.573.01.187.009.437-.071.685.524.249.598.847 2.07.922 2.22.075.15.125.324.025.524-.1.199-.15.324-.299.499-.15.174-.315.389-.45.523-.15.15-.306.314-.132.613.175.299.774 1.279 1.66 2.068 1.14.1.014 2.062 1.258 2.348 1.582.286.324.461.274.636.075.174-.199.748-.872.948-1.171.199-.3.399-.249.673-.15.274.1.1.744 2.143 2.164.872.424.125.723.199 1.197.125.474-.075.897-.224 1.147-.15z"/>
+                    </svg>
+                    <span>Pesan via WhatsApp</span>
+                </a>
+              <!-- Teks Kecil Tambahan -->
+                <p class="wa-sub-text">Menerima kritik & saran</p>
+            </div>
+        </section>
+
+    </main> <!-- Penutup .main-content -->
+
+    <!-- ================= STRUKTUR POP-UP MODAL ================= -->
+    <!-- Modal 1: Manfaat Susu Kedelai -->
+    <div id="modal-manfaat" class="modal-overlay" aria-hidden="true">
+        <div class="modal-box">
+            <button type="button" class="modal-close" aria-label="Tutup">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-green">🌱</div>
+                <h3 class="modal-title">Manfaat Susu Kedelai</h3>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li><strong>Mendukung Pengelolaan Berat Badan:</strong> <br>Tinggi protein dan rendah kalori sehingga dapat memberikan rasa kenyang lebih lama.</li>
+                    <li><strong>Alternatif Susu Bebas Laktosa: </strong> <br>Cocok untuk orang yang mengalami intoleransi laktosa, alergi susu sapi, atau menjalani pola makan vegetarian.</li>
+                    <li><strong>Menjaga Kesehatan Jantung:</strong> <br>Membantu menurunkan kolesterol jahat (LDL) dan menjaga tekanan darah tetap stabil berkat kandungan kalium, protein, dan lemak sehat.</li>
+                    <li><strong>Memperkuat Tulang:</strong> <br>Mengandung kalsium dan vitamin D yang membantu menjaga kepadatan tulang serta mencegah osteoporosis.</li>
+                    <li><strong>Sumber Antioksidan dan Imunitas:</strong> <br>Mengandung antioksidan dan protein yang membantu melindungi sel tubuh dari kerusakan serta mendukung kinerja sistem imun.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   <!-- Modal 2: Proses Pembuatan Susu Kedelai (MENGGANTIKAN MODAL RISIKO) -->
+    <div id="modal-pembuatan" class="modal-overlay" aria-hidden="true">
+        <div class="modal-box">
+            <button type="button" class="modal-close" aria-label="Tutup">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-blue">🥣</div>
+                <h3 class="modal-title">Proses Pembuatan</h3>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li><strong>Pemilihan Biji Kedelai:</strong> <br>Siapkan dan pilih biji kedelai terbaik dengan ukuran 250 gram.</li>
+                    <li><strong>Pencucian & Perendaman:</strong> <br>Cuci bersih biji kedelai tadi, dan rendam sekitar 6-12 jam, kemudian rebus hingga mendidih agar kulit arinya mudah dikelupas. </li>
+                    <li><strong>Pemisahan kulit ari:</strong> <br>Pisahkan kulit ari dengan biji kedelai dengan meremas dan menggosoknya menggunakan kedua tangan secara perlahan.</li>
+                    <li><strong>Penggilingan:</strong> <br>Siapkan dulu air 3 liter untuk biji kedelai 250 gram. Masukkan biji kedelai (tidak semua) dan air secukupnya kedalam blender, ulangi proses ini hingga biji kedelai habis.</li>
+                    <li><strong>Penyaringan:</strong> <br>Saring hasil blenderan tadi menggunakan kain tipis ke dalam wadah, masukkan juga sisa dari air 3 liter tadi.</li>
+                    <li><strong>Perebusan:</strong> <br>Rebus sari kedelai bersama 1 daun pandan, gula 250 gram, dan garam seujung sendok teh. Tunggu hingga mendidih.</li>
+                    <li><strong>Penyelesaian:</strong> <br>Ketika mendidih, buang busa yang ada di atas susu kedelai dan matikan kompor. Susu kedelai sudah siap dinikmati!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  
+    <!-- ================= BAGIAN 7: FOOTER ================= -->
+    <footer class="site-footer scroll-reveal">
+        <p>&copy; 2026 SARI KEDELAI Bunda Yuna. All Rights Reserved. | Dibuat di jarangan.</p>
+    </footer>
+
+    <!-- ================= TOMBOL FLOATING (WA & KEMBALI KE ATAS) ================= -->
+    <div class="floating-buttons-container">
+        <!-- Tombol Kembali ke Atas -->
+        <button id="backToTopBtn" class="floating-btn btn-top" aria-label="Kembali ke atas">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+
+        <!-- Tombol WhatsApp Mengambang -->
+        <a href="https://wa.me/6285231651685?text=Halo%20Kak,%20saya%20mau%20tanya%20seputar%20SARI%20KEDELAI%20Bunda%20Yuna" target="_blank" class="floating-btn floating-wa" aria-label="Hubungi via WhatsApp">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.012 2c-5.508 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.169 5.292-1.387c1.464.798 3.114 1.218 4.78 1.218h.004c5.508 0 9.99-4.478 9.99-9.985 0-2.667-1.038-5.175-2.926-7.063s-4.394-2.937-7.066-2.937zm5.882 14.28c-.247.695-1.439 1.327-1.986 1.411-.502.077-1.157.11-1.86-.114-.43-.137-.988-.319-1.703-.628-2.998-1.298-4.953-4.331-5.103-4.531-.15-.2-1.222-1.628-1.222-3.104 0-1.477.773-2.202 1.047-2.501.274-.3.599-.374.799-.374.199 0 .399.002.573.01.187.009.437-.071.685.524.249.598.847 2.07.922 2.22.075.15.125.324.025.524-.1.199-.15.324-.299.499-.15.174-.315.389-.45.523-.15.15-.306.314-.132.613.175.299.774 1.279 1.66 2.068 1.14.1.014 2.062 1.258 2.348 1.582.286.324.461.274.636.075.174-.199.748-.872.948-1.171.199-.3.399-.249.673-.15.274.1.1.744 2.143 2.164.872.424.125.723.199 1.197.125.474-.075.897-.224 1.147-.15z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Menyambungkan ke Logika JavaScript Interaktif -->
+    <script src="halaman.js"></script>
+</body>
+</html>
