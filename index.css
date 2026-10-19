@@ -1,10 +1,10 @@
 /* =================================================================
-   css/index.css - Tema Creamy Soy Latte (Cerah & Spektrum Dinamis)
+   css/index.css - Tema Creamy Soy Latte (Desktop & Mobile Optimized)
    ================================================================= */
 
 :root {
     --primary: #738a75;          /* Hijau Sage untuk Aksen Utama */
-    --primary-glow: rgba(115, 138, 117, 0.08); 
+    --primary-glow: rgba(115, 138, 117, 0.12); 
     --bg-light: #fcfbfa;         /* Latar Belakang Putih Susu Alami */
     --card-bg: #f3eee6;          /* Kartu Krem Lembut Matte */
     --text-main: #1a1c1e;        /* Hitam Arang untuk Keterbacaan Maksimal */
@@ -19,7 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -45,11 +45,11 @@ canvas {
     pointer-events: none;
 }
 
-/* EFEK CAHAYA AURORA DI BELAKANG KARTU */
+/* EFEK CAHAYA AURORA DI BELAKANG KARTU (Dibuat lebih luas untuk desktop) */
 .aurora {
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
     background: radial-gradient(circle, var(--primary-glow) 0%, rgba(252,251,250,0) 70%);
     top: 50%;
     left: 50%;
@@ -65,7 +65,7 @@ canvas {
     position: relative;
     z-index: 10;
     width: 100%;
-    max-width: 450px;
+    max-width: 520px; /* Diperlebar sedikit agar ideal di layar desktop */
     padding: 24px;
     perspective: 1000px;
 }
@@ -73,14 +73,13 @@ canvas {
 /* =================================================================
    KARTU CERAH DENGAN BORDER SPEKTRUM ACAK BERGANTI-GANTI
    ================================================================= */
-
 .portal-card {
     position: relative; 
     background: var(--card-bg); 
-    padding: 48px 36px;
-    border-radius: 32px;
+    padding: 56px 44px; /* Padding ditambah agar lebih lapang di desktop */
+    border-radius: 36px;
     text-align: center;
-    box-shadow: 0 20px 40px -15px rgba(26, 28, 30, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(26, 28, 30, 0.1);
     transform: translateY(30px);
     opacity: 0;
     animation: emergeCard 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -113,9 +112,9 @@ canvas {
 .portal-card::after {
     content: '';
     position: absolute;
-    inset: 2.5px; 
+    inset: 3px; 
     background: var(--card-bg); 
-    border-radius: 30px; 
+    border-radius: 33px; 
     z-index: 2;
 }
 
@@ -127,56 +126,45 @@ canvas {
 /* =================================================================
    EFEK JUDUL UTAMA (GRADASI MENGALIR & GLOW)
    ================================================================= */
-
 .title {
-    font-size: 38px;
+    font-size: 42px; /* Dibuat lebih besar dan megah di desktop */
     font-weight: 800;
     letter-spacing: -0.5px;
     text-transform: uppercase;
-    /* Menggunakan gradasi warna dari Hijau Sage ke Hitam Arang Elegan */
     background: linear-gradient(135deg, #738a75 0%, #2c3e30 50%, #1a1c1e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  
     margin-bottom: 2px;
     filter: drop-shadow(0 2px 4px rgba(115, 138, 117, 0.15));
 }
 
 .title1 {
-    font-size: 32px;
+    font-size: 36px; /* Dibuat proporsional untuk desktop */
     font-weight: 900;
     letter-spacing: -0.5px;
-    /* Efek teks gradasi bergerak (Shimmering Text) */
     background: linear-gradient(270deg, #738a75, #a2d6a6, #fce882, #738a75);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradasiTeksBergerak 6s ease infinite;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     filter: drop-shadow(0 2px 6px rgba(162, 214, 166, 0.3));
 }
 
-/* Keyframes untuk animasi warna teks bergerak */
-@keyframes gradasiTeksBergerak {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
 .subtitle {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text-muted);
-    line-height: 1.6;
-    min-height: 45px; 
-    margin-bottom: 40px;
+    line-height: 1.7;
+    min-height: 50px; 
+    margin-bottom: 36px;
 }
 
 /* AREA TOMBOL MAGNETIK */
 .btn-magnetic-container {
     display: inline-block;
     position: relative;
-    border-radius: 18px;
+    border-radius: 20px;
     transition: transform 0.2s ease-out;
 }
 
@@ -190,47 +178,13 @@ canvas {
     background-size: 400% 400%;
     color: #ffffff; 
     border: none;
-    padding: 18px 42px;
-    border-radius: 18px;
-    font-size: 15px;
+    padding: 18px 46px;
+    border-radius: 20px;
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0 8px 20px rgba(115, 138, 117, 0.2);
-    animation: aliranWarnaTombol 6s ease infinite;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi halus untuk hover */
-}
-
-/* Efek saat kursor menyentuh tombol (membesar sedikit tanpa merusak layout) */
-.btn-portal:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 25px rgba(115, 138, 117, 0.35);
-}
-
-/* =================================================================
-   TOMBOL PORTAL GRADASI PRE-FLOWING DENGAN EFEK SHIMMER SWEEPING
-   ================================================================= */
-
-.btn-portal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    
-    background: linear-gradient(135deg, var(--primary), var(--sp-green), var(--sp-yellow), var(--sp-pastel), var(--primary));
-    background-size: 400% 400%;
-    color: #ffffff; 
-    
-    border: none;
-    padding: 18px 42px;
-    border-radius: 18px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 8px 20px rgba(115, 138, 117, 0.2);
-    
+    box-shadow: 0 10px 25px rgba(115, 138, 117, 0.25);
     animation: aliranWarnaTombol 6s ease infinite;
     transition: all 0.3s ease;
 }
@@ -255,16 +209,26 @@ canvas {
 .btn-portal span {
     position: relative;
     z-index: 4;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-portal:hover {
+    transform: scale(1.06);
+    box-shadow: 0 14px 30px rgba(115, 138, 117, 0.35);
 }
 
 /* =================================================================
    KEYFRAMES ANIMASI UTAMA
    ================================================================= */
-
 @keyframes putarSpektrum {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@keyframes gradasiTeksBergerak {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 @keyframes aliranWarnaTombol {
@@ -294,4 +258,20 @@ canvas {
     opacity: 0;
     filter: blur(10px);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* RESPONSIF UNTUK MOBILE */
+@media (max-width: 768px) {
+    .portal-container {
+        padding: 16px;
+    }
+    .portal-card {
+        padding: 40px 24px;
+    }
+    .title {
+        font-size: 32px;
+    }
+    .title1 {
+        font-size: 28px;
+    }
 }
