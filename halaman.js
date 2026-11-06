@@ -1,5 +1,5 @@
 /* =================================================================
-   js/halaman.js - Logika Efek Scroll Fade-In & Tombol Kembali ke Atas
+   js/halaman.js - Logika Efek Scroll, Back to Top, Modal, & Carousel
    ================================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -48,8 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-});
-    // 3. Logika Pop-Up Modal (Fakta Menarik)
+    // 3. Logika Pop-Up Modal (Fakta Menarik & Varian Produk)
     const factButtons = document.querySelectorAll('.btn-fact');
     const modalOverlays = document.querySelectorAll('.modal-overlay');
 
@@ -89,3 +88,51 @@ document.addEventListener("DOMContentLoaded", () => {
             closeModal();
         }
     });
+
+    // 4. Logika Carousel Varian Produk di dalam Modal
+    const modalProduk = document.getElementById("modal-produk");
+    if (modalProduk) {
+        const slides = modalProduk.querySelectorAll(".carousel-slide");
+        const dots = modalProduk.querySelectorAll(".dot");
+        const prevBtn = modalProduk.querySelector(".prev-btn");
+        const nextBtn = modalProduk.querySelector(".next-btn");
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                if (dots[i]) dots[i].classList.remove("active");
+                
+                if (i === currentIndex) {
+                    slide.classList.add("active");
+                    if (dots[i]) dots[i].classList.add("active");
+                }
+            });
+        }
+
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener("click", () => {
+                showSlide(currentIndex + 1);
+            });
+
+            prevBtn.addEventListener("click", () => {
+                showSlide(currentIndex - 1);
+            });
+        }
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+                showSlide(i);
+            });
+        });
+    }
+
+});
