@@ -138,7 +138,16 @@
                         </svg>
                         <span>Proses Pembuatan</span>
                     </button>
-
+<!-- Tombol 3: Varian Produk (Baru) -->
+<button type="button" class="btn-fact" data-modal="modal-produk">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <path d="M16 10a4 4 0 0 1-8 0"></path>
+    </svg>
+    <span>Varian Produk</span>
+</button>
+                    
 
                 </div>
             </div>
@@ -219,7 +228,62 @@
             </div>
         </div>
     </div>
-  
+  <!-- Modal 3: Varian Produk dengan Carousel -->
+<div id="modal-produk" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box modal-box-carousel">
+        <button type="button" class="modal-close" aria-label="Tutup">&times;</button>
+        <div class="modal-header">
+            <div class="modal-icon icon-green">🥛</div>
+            <h3 class="modal-title">Varian Produk Sari Kedelai</h3>
+        </div>
+        <div class="modal-body">
+            <!-- Container Carousel -->
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide active">
+                        <img src="produk-1.jpg" alt="Varian Produk 1" class="carousel-img">
+                        <p class="carousel-caption">Sari Kedelai Original Botol 250ml</p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <img src="produk-2.jpg" alt="Varian Produk 2" class="carousel-img">
+                        <p class="carousel-caption">Sari Kedelai Manis Sedang 500ml</p>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <img src="produk-3.jpg" alt="Varian Produk 3" class="carousel-img">
+                        <p class="carousel-caption">Kemasan Keluarga / Spesial</p>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <img src="produk-4.jpg" alt="Varian Produk 4" class="carousel-img">
+                        <p class="carousel-caption">Penyajian Dingin dengan Es</p>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="carousel-slide">
+                        <img src="produk-5.jpg" alt="Varian Produk 5" class="carousel-img">
+                        <p class="carousel-caption">Paket Pre-Order H-1 Rejoso</p>
+                    </div>
+                </div>
+
+                <!-- Tombol Navigasi Panah -->
+                <button type="button" class="carousel-btn prev-btn" aria-label="Sebelumnya">&#10094;</button>
+                <button type="button" class="carousel-btn next-btn" aria-label="Selanjutnya">&#10095;</button>
+
+                <!-- Titik Indikator (Dots) -->
+                <div class="carousel-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
     <!-- ================= BAGIAN 7: FOOTER ================= -->
     <footer class="site-footer scroll-reveal">
         <p>&copy; 2026 SARI KEDELAI Riswan. All Rights Reserved. | Dibuat di jarangan.</p>
