@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 3. Logika Pop-Up Modal (Fakta Menarik & Varian Produk)
+        // 3. Logika Pop-Up Modal (Fakta Menarik & Varian Produk)
     const factButtons = document.querySelectorAll('.btn-fact');
     const modalOverlays = document.querySelectorAll('.modal-overlay');
 
@@ -57,10 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
         modalOverlays.forEach(modal => {
             if (modal.classList.contains('active')) {
                 modal.classList.remove('active');
-                // Mundurkan riwayat browser jika modal ditutup secara manual
-                if (window.history.state && window.history.state.modalOpen) {
-                    window.history.back();
-                }
             }
         });
     };
@@ -72,22 +68,37 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
                 targetModal.classList.add('active');
-                // Catat state history saat modal terbuka
-                history.pushState({ modalOpen: true }, "");
+                // Tambahkan riwayat baru agar tombol Back di HP mendeteksi adanya "halaman" modal
+                history.pushState({ modalOpen: true }, "", window.location.href);
             }
         });
     });
 
-    // Tutup modal otomatis saat tombol "Back" (Kembali) di HP/browser ditekan
-    window.addEventListener('popstate', () => {
+    // Tangkap tombol "Back" HP/Browser untuk menutup modal tanpa berpindah halaman
+    window.addEventListener('popstate', (event) => {
+        let isModalActive = false;
         modalOverlays.forEach(modal => {
-            modal.classList.remove('active');
+            if (modal.classList.contains('active')) {
+                isModalActive = true;
+                modal.classList.remove('active');
+            }
         });
+
+        // Jika modal tadinya aktif, cegah perpindahan halaman dengan mendorong state kembali
+        if (isModalActive) {
+            history.pushState(null, "", window.location.href);
+        }
     });
 
     // Tutup saat tombol 'X' diklik
     document.querySelectorAll('.modal-close').forEach(closeBtn => {
-        closeBtn.addEventListener('click', closeModal);
+        closeBtn.addEventListener('click', () => {
+            closeModal();
+            // Jika ditutup manual lewat tombol X, kita mundurkan history-nya sekali
+            if (window.history.state && window.history.state.modalOpen) {
+                history.back();
+            }
+        });
     });
 
     // Tutup saat area luar modal (overlay) diklik
@@ -95,6 +106,9 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) {
                 closeModal();
+                if (window.history.state && window.history.state.modalOpen) {
+                    history.back();
+                }
             }
         });
     });
@@ -103,8 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeModal();
+            if (window.history.state && window.history.state.modalOpen) {
+                history.back();
+            }
         }
     });
+
 
     // 4. Logika Carousel Varian Produk di dalam Modal
     const modalProduk = document.getElementById("modal-produk");
