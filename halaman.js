@@ -52,6 +52,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const factButtons = document.querySelectorAll('.btn-fact');
     const modalOverlays = document.querySelectorAll('.modal-overlay');
 
+    // Fungsi untuk menutup semua modal
+    const closeModal = () => {
+        modalOverlays.forEach(modal => {
+            if (modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                // Mundurkan riwayat browser jika modal ditutup secara manual
+                if (window.history.state && window.history.state.modalOpen) {
+                    window.history.back();
+                }
+            }
+        });
+    };
+
     // Buka Modal saat tombol diklik
     factButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -59,14 +72,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetModal = document.getElementById(modalId);
             if (targetModal) {
                 targetModal.classList.add('active');
+                // Catat state history saat modal terbuka
+                history.pushState({ modalOpen: true }, "");
             }
         });
     });
 
-    // Fungsi untuk menutup semua modal
-    const closeModal = () => {
-        modalOverlays.forEach(modal => modal.classList.remove('active'));
-    };
+    // Tutup modal otomatis saat tombol "Back" (Kembali) di HP/browser ditekan
+    window.addEventListener('popstate', () => {
+        modalOverlays.forEach(modal => {
+            modal.classList.remove('active');
+        });
+    });
 
     // Tutup saat tombol 'X' diklik
     document.querySelectorAll('.modal-close').forEach(closeBtn => {
